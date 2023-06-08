@@ -2,14 +2,12 @@
 
 const sass = require("gulp-sass")(require("sass"));
 const gulp = require("gulp");
-const gutil = require("gulp-util");
 const sourcemaps = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
 const autoprefixer = require("gulp-autoprefixer");
 const bs = require("browser-sync").create();
 const rimraf = require("rimraf");
 const comments = require("gulp-header-comment");
-const jshint = require("gulp-jshint");
 
 var path = {
   src: {
@@ -21,10 +19,10 @@ var path = {
     js: "source/js/*.js",
     scss: "source/scss/**/*.scss",
     images: "source/images/**/*.+(png|jpg|gif|svg)",
-    fonts: "source/fonts/**/*.+(eot|ttf|woff|woff2|otf)",
   },
   build: {
-    dir: "theme/",
+    dirBuild: "theme/",
+    dirDev: "theme/",
   },
 };
 
@@ -45,7 +43,7 @@ gulp.task("html:build", function () {
     GITHUB: https://github.com/themefisher/
     `)
     )
-    .pipe(gulp.dest(path.build.dir))
+    .pipe(gulp.dest(path.build.dirDev))
     .pipe(
       bs.reload({
         stream: true,
@@ -73,7 +71,7 @@ gulp.task("scss:build", function () {
     GITHUB: https://github.com/themefisher/
     `)
     )
-    .pipe(gulp.dest(path.build.dir + "css/"))
+    .pipe(gulp.dest(path.build.dirDev + "css/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -85,9 +83,6 @@ gulp.task("scss:build", function () {
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
-    .pipe(jshint("./.jshintrc"))
-    .pipe(jshint.reporter("jshint-stylish"))
-    .on("error", gutil.log)
     .pipe(
       comments(`
   WEBSITE: https://themefisher.com
@@ -96,7 +91,7 @@ gulp.task("js:build", function () {
   GITHUB: https://github.com/themefisher/
   `)
     )
-    .pipe(gulp.dest(path.build.dir + "js/"))
+    .pipe(gulp.dest(path.build.dirDev + "js/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -108,19 +103,7 @@ gulp.task("js:build", function () {
 gulp.task("images:build", function () {
   return gulp
     .src(path.src.images)
-    .pipe(gulp.dest(path.build.dir + "images/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-});
-
-// fonts
-gulp.task("fonts:build", function () {
-  return gulp
-    .src(path.src.fonts)
-    .pipe(gulp.dest(path.build.dir + "fonts/"))
+    .pipe(gulp.dest(path.build.dirDev + "images/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -132,7 +115,7 @@ gulp.task("fonts:build", function () {
 gulp.task("plugins:build", function () {
   return gulp
     .src(path.src.plugins)
-    .pipe(gulp.dest(path.build.dir + "plugins/"))
+    .pipe(gulp.dest(path.build.dirDev + "plugins/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -142,7 +125,7 @@ gulp.task("plugins:build", function () {
 
 // Other files like favicon, php, sourcele-icon on root directory
 gulp.task("others:build", function () {
-  return gulp.src(path.src.others).pipe(gulp.dest(path.build.dir));
+  return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
 });
 
 // Clean Build Folder
@@ -157,7 +140,6 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.scss, gulp.series("scss:build"));
   gulp.watch(path.src.js, gulp.series("js:build"));
   gulp.watch(path.src.images, gulp.series("images:build"));
-  gulp.watch(path.src.fonts, gulp.series("fonts:build"));
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
 });
 
@@ -170,13 +152,12 @@ gulp.task(
     "js:build",
     "scss:build",
     "images:build",
-    "fonts:build",
     "plugins:build",
     "others:build",
     gulp.parallel("watch:build", function () {
       bs.init({
         server: {
-          baseDir: path.build.dir,
+          baseDir: path.build.dirDev,
         },
       });
     })
@@ -191,7 +172,6 @@ gulp.task(
     "js:build",
     "scss:build",
     "images:build",
-    "fonts:build",
     "plugins:build"
   )
 );
