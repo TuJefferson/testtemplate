@@ -1,17 +1,425 @@
-@@include('header.htm')
-@@include('blocks/navigation.htm')
-@@include('blocks/page-title.htm', {
-"title": "Check our story",
-"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?"
-})
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, sans-serif;
+            background-color: #fff;
+        }
+
+        .gradient-multiline {
+            position: relative;
+            width: 300px;
+            margin: 40px auto;
+            background-color: #fff;
+            text-align: center;
+            line-height: 1.5em;
+            overflow: hidden;
+        }
+
+        .gradient-multiline span {
+            color: #fff;
+            background-color: #000;
+
+            padding: 0.225rem 0.5rem;
+
+            /* Needs prefixing */
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        @supports(mix-blend-mode: lighten) {
+
+            .gradient-multiline::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                pointer-events: none;
+                background: linear-gradient(60deg, #3629a2, #00ceff);
+
+                mix-blend-mode: lighten;
+            }
+
+        }
+    </style>
+
+    <!-- ** Basic Page Needs ** -->
+    <meta charset="utf-8">
+    <title>Fuiste 6 veces, pero ahora si puede ser magica</title>
+
+    <!-- ** Mobile Specific Metas ** -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Business Bootstrap Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Themefisher">
+    <meta name="generator" content="Themefisher Promodise Template v1.0">
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <!-- Icofont -->
+    <link rel="stylesheet" href="plugins/icofont/icofont.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Favicon-->
+
+    <link rel="icon" href="images/YPLogo.png" type="image/x-icon">
+
+</head>
+
+<body data-spy="scroll" data-target="#mainNav">
+
+    <!--MAIN HEADER AREA END -->
+    <!--MAIN BANNER AREA START -->
+    <div class="page-banner-area page-contact" id="page-banner">
+        <div class="overlay dark-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                    <div class="banner-content content-padding">
+                        <h1 class="text-white">Se que ya fuiste 6 veces, pero....</h1>
+                        <p>Ahora Puedes hacer que sea tan magica, que cambie por completo el rumbo de todo. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MAIN HEADER AREA END -->
 
 
-@@include('blocks/about-2.htm')
-@@include('blocks/company.htm')
-@@include('blocks/counter-2.htm')
-@@include('blocks/service-2.htm')
-@@include('blocks/team.htm')
-@@include('blocks/partner.htm')
+    <!--  ABout2  AREA START  -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-12 col-md-8 mb-4">
+                    <h3 class="mb-3">Que loco a pesar de tantas adversidades, ve la vaina si vamos a Disney <br></h3>
 
-@@include('blocks/footer.htm')
-@@include('footer.htm')
+                    <h2 class="mb-3">Si ya se que fuiste 6 veces y la mejor sin duda esta <i class="fa fa-angle-right">
+                        </i> <br></h2>
+                    <p class="mb-4"></p>
+
+                    <p class="mb-4"></p>
+
+                    <span style="display: none;" class="h5 mb-4">Si ya se que fuiste 6 veces y la mejor sin duda esta <i
+                            class="fa fa-angle-right"></i> </span>
+                    <ul class="about-list2 my-4">
+                        <li class="mb-2" style="display: none;"> Best Analytics Audits to your site in specific niche
+                        </li>
+
+                        <li class="mb-2" style="display: none;">
+                            <i class="far fa-check-circle"> </i> Modern Keyword Analysis to keep up to date
+                        </li>
+
+                        <li class="mb-2" style="display: none;">
+                            <i class="far fa-check-circle"> </i> More quality content, social networking and relative
+                            sharing
+                        </li>
+
+                        <li class="mb-2" style="display: none;">
+                            <i class="far fa-check-circle"> </i> Social networking and relative sharing More quality
+                            content,
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-lg-6 col-md-4">
+                    <img src="images/about/FamiliaAdriana.jpg" alt="" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ABOUT AREA END  -->
+    <!--  HISTORY AREA  -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="media img-block mb-3 mb-lg-0">
+                        <img src="images/about/ConShrek.jpg" alt="" class="img-fluid rounded mr-3">
+
+                        <div class="media-body ">
+                            <h4 class="mb-3">No creo que esta sea tan especial</h4>
+                            <p style="text-align: center; font-size: 100px;">
+                                <br>
+                                🙄
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="media img-block">
+                        <img src="images/about/ConBobPatiño.jpg" alt="" class="img-fluid rounded mr-3">
+
+                        <div class="media-body">
+                            <h4 class="mb-3">Tampoco esta!</h4>
+                            <br>
+                            <p style="text-align: center; font-size: 100px;">
+                                <br>
+                                🧐
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="media img-block mb-3 mb-lg-0">
+                        <img src="images/about/ConLosDeUP.jpg" alt="" class="img-fluid rounded mr-3">
+
+                        <div class="media-body ">
+                            <h4 class="mb-3">Quizas aqui si fue especial</h4>
+
+                            <p style="text-align: center; font-size: 100px;">
+                                <br>
+                                🥹
+                            </p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="media img-block">
+                        <img src="images/about/ConPluto.jpg" alt="" class="img-fluid rounded mr-3">
+
+                        <div class="media-body">
+                            <h4 class="mb-3">O incluso aqui</h4>
+
+                            <p style="text-align: center; font-size: 100px;">
+                                <br>
+                                😍
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br> <br>
+            <div class="section-heading">
+
+                <h4 class="section-title">Existe un factor clave que olvidas </h4>
+                <p>Estas con alguien que siente por ti un amor tan mágico como ese lugar, que visualiza un castillo en
+                    donde tú
+                    seas la reina, Gordoy el príncipe y yo la bestia, </p>
+
+                <p>Si existe un lugar que nos pueda volver a ecaminar por el rumbo al cual estamos destinados, es este.
+                </p>
+
+                <p>
+                <h4> Aprovechemos al máximo esto porque no vamos a conseguir lo que tenemos en otra persona, ponle de tu
+                    magia Magico
+                    Gonzales y te vas a dar cuenta que: </h4>
+                </p>
+
+                <p class="gradient-multiline" style="font-size: 30px;"> Llegó el momento de dejar a un costado el
+                    pensamiento de: "bueno vamos a ver si funciona."
+                </p>
+
+                <p>
+                <h4> Necesitabas esta señal De Dios, universo, destino. </h4>
+                </p>
+
+                <p class="gradient-multiline" style="font-size: 30px;"> Bueno ya la tienes ahora debemos enfocarnos en
+                    que FUNCIONE. Porque si el destino como dices se encarga de cambiar todo como me lo dijsite, el
+                    mismo destino nos dio la posibilidad de ir a Disney a pesar de mil adversidades, porque el puto
+                    destino aun no nos termina de separar, si tu teoria es cierta, pues bueno tienes muchas señales que
+                    evidencian el camino que debemos tomar. 🤌🏻
+                </p>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--  SECTION Service-2 END  -->
+
+
+    <section id="blog" class="section-padding bg-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 m-auto">
+                    <div class="section-heading">
+                        <h4 class="section-title">Estadisticamente somos algo como esto...</h4>
+                        <div class="line"></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        </div>
+    </section>
+
+
+    <!--  COUNTER AREA START  -->
+    <section id="counter" class="section-padding">
+        <div class="overlay dark-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="counter-stat">
+                        <i class="icofont icofont-heart"></i>
+                        <span class="counter"> -999 </span>
+                        <h5>Momentos de felicidad</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="counter-stat">
+                        <i class="icofont icofont-rocket"></i>
+                        <span class="counter">-1000</span>
+                        <h5>Orgamos</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="counter-stat">
+                        <i class="icofont icofont-hand-power"></i>
+                        <span class="counter">+2000</span>
+                        <h5>Peleas</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="counter-stat">
+                        <i class="icofont icofont-shield-alt"></i>
+                        <span class="counter" data-count="0">0</span>
+                        <h5>Confianza</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  COUNTER AREA END  -->
+
+
+    <!--  SERVICE AREA START  -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-sm-12 col-md-6 mb-5 mb-lg-0">
+                    <img src="images/bg/LosTres.jpg" alt="feature bg" class="img-fluid">
+                </div>
+
+                <div class="col-lg-7 pl-4">
+                    <div class="mb-5">
+                        <h3 class="mb-4">Sin embargo bueno no te sientas bajo presión ni nada de eso.
+
+                            <br> <br> Sea de la manera que Frívola o la versión de la Gordi que
+                            me enamoro.
+
+                            <br> <br> Eres la persona ideal para vivir esta experiencia
+
+
+                            <br>
+                            <h1 style="text-align: right;"> Por ultimo... </h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="col-lg-12 col-sm-12 m-auto">
+        <div class="section-heading">
+            <h4 class="section-title">Si se nos da, quiero seguir haciendo tus días especiales, mágicos, divertidos,
+                entretenidos, alegres, llenos de amor y que tengas la sensacion de estar en un mundo feliz como
+                Disney.</h4>
+            <div class="line"></div>
+
+
+            <br>
+            <br>
+
+            <p>
+            <h5> Código de activación de el cupón: </h5>
+            </p>
+
+            <p class="gradient-multiline" style="font-size: 30px;"> Enviar un mensaje con el sigueinte texto: EL Magico
+                Gonzales esta aqui 🎩🪄
+            </p>
+        </div>
+
+
+    </div>
+    <!--  SECTION TEAM  -->
+
+    <!--  SECTION TEAM END  -->
+    <!--  PARTNER START  -->
+
+    <!--  PARTNER END  -->
+
+    <!--  FOOTER AREA START  -->
+    <section id="footer" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-around">
+
+
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer-copy">
+                        Copyright &copy; 2023, Designed &amp; Developed by <img src="images/bg/YPLogoAzul.png"
+                            style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  FOOTER AREA END  -->
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap css -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+    <script src="plugins/google-map/map.js"></script>
+
+    <!-- main script -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
